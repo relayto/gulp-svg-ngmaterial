@@ -83,7 +83,7 @@ module.exports = function (config) {
     if (heightAttr && contentTransfrom === SVG) {
       $symbol.attr('height', heightAttr);
     }
-    if (fillAttr && contentTransfrom === SVG) {
+    if (fillAttr && (contentTransfrom === SVG || contentTransfrom === G)) {
       $symbol.attr('fill', fillAttr);
     }
 
