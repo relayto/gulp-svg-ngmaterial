@@ -43,6 +43,7 @@ module.exports = function (config) {
     var viewBoxAttr = $svg.attr('viewBox');
     var widthAttr   = $svg.attr('width');
     var heightAttr  = $svg.attr('height');
+    var fillAttr  = $svg.attr('fill');
 
     var $symbol = $(contentTransfrom);
     //var $symbol = $('<g/>');
@@ -81,6 +82,9 @@ module.exports = function (config) {
     }
     if (heightAttr && contentTransfrom === SVG) {
       $symbol.attr('height', heightAttr);
+    }
+    if (fillAttr && contentTransfrom === SVG) {
+      $symbol.attr('fill', fillAttr);
     }
 
     $symbol.append($svg.contents());
